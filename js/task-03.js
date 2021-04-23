@@ -18,15 +18,12 @@ const images = [
 
 const galleryListRef = document.querySelector('#gallery');
 
-const imagesMarkup = images
-  .map(({ url, alt }) =>
-    galleryListRef.insertAdjacentHTML(
-      'afterbegin',
-      `<li class="item"><img src="${url}" alt="${alt}" class="photo"></li>`,
-    ),
-  )
-  .join('');
-
+const imagesMarkup = images.forEach(({ url, alt }) =>
+  galleryListRef.insertAdjacentHTML(
+    'afterbegin',
+    `<li class="item"><img src="${url}" alt="${alt}" class="photo"></li>`,
+  ),
+);
 
 //  Alternative solution //
 

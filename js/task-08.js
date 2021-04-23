@@ -13,6 +13,7 @@ function countAmount() {
 
 function createBoxes(amount) {
   let basicSize = 30;
+
   for (let i = 0; i < amount; i += 1) {
     basicSize += i * 10;
 
